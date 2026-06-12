@@ -8,7 +8,7 @@ This tool can be used to quickly find samples in MalwareBazar (MB) by extending 
 
 The goal of this tool is for it to be fairly intuitive if the operator is familiar with MB search syntax.
 
-No API key is required.
+API key is now always required. Create an abuse.ch account here: https://auth.abuse.ch/
 
 **Download LNK files tagged with "CobaltStrike"**
 
@@ -21,18 +21,18 @@ No API key is required.
 ## Known Issues
 
 - `yara` search query does not work as expected so it is not supported
-- `issuer_cn` search query is not supported do to common names often having spaces, breaking the logic
+- `issuer_cn` search query is not supported due to common names often having spaces, breaking the logic
 - Using extremely common parameters mixed with extremly specific ones can cause missed results. To validate, just use the specific parameter.
-    - i.e. it is very common for a sample to have "exe" as a tag, and since the script can only return the latest 1000 results, if this tag is combined with a very specific parameter, like serial number, it will like return no results incorrectly
+    - i.e. it is very common for a sample to have "exe" as a tag. Since the api can only return the latest 1000 results, and if this is combined with a very specific parameter like serial numbers, it will likely return no results.
 
 ## API Limit
 
-It is recommended to understand the MB API limits before use.
+It is recommended to understand the MalBz API limits before use.
 
 https://bazaar.abuse.ch/faq/#api-limit
 
-## Tool Showcase
+## Creator's showcase
 
-My Medium post about the tool
+Medium post by the original creator
 
 https://montysecurity.medium.com/hunting-cobalt-strike-lnk-loaders-f3c407a991c0
